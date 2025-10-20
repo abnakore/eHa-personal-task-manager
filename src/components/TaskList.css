@@ -1,0 +1,131 @@
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: between;
+    align-items: flex-start;
+    background: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.task-item:hover {
+    box-shadow: var(--shadow);
+}
+
+.task-item.completed {
+    opacity: 0.7;
+}
+
+.task-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+}
+
+.task-checkbox {
+    margin-top: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.task-details {
+    flex: 1;
+}
+
+.task-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.task-description {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.task-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.priority-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-low {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.priority-medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.priority-high {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+[data-theme="dark"] .priority-low {
+    background: #064e3b;
+    color: #a7f3d0;
+}
+
+[data-theme="dark"] .priority-medium {
+    background: #92400e;
+    color: #fcd34d;
+}
+
+[data-theme="dark"] .priority-high {
+    background: #7f1d1d;
+    color: #fca5a5;
+}
+
+.task-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+    background: rgba(239, 68, 68, 0.1);
+}
